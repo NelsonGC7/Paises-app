@@ -1,4 +1,5 @@
 import { Paisbox } from "./components/Paisbox.jsx";
+import { Paiscomplete } from "./components/Paiscomplete.jsx";
 import { useState,useEffect } from "react";
 import './styles/App.css';
 import moon from '../public/svgs/moon.svg'
@@ -36,14 +37,14 @@ const App = ()=>{
             .catch(e=> console.log("errorSearch",e))
     }
    };
-   function clikComponent(newPais){
-    fetch(`https://restcountries.com/v3.1/name/${newPais}`)
-        .then(res => res.json())
-            .then(data => {
-                setPaistotal(data)
-                setVista(true)
-            }).catch(e=> console.log("error",e));
-    
+   async function clikComponent(newPais){
+    const res = await fetch(`https://restcountries.com/v3.1/name/${newPais}`);
+    const data = await res.json();
+    if(data){
+        setPaistotal(data);
+        setVista(true);
+        console.log(data);
+    }
    }
   
    
@@ -61,7 +62,35 @@ return(
     { vista ? 
     (
         <>
-        <h2>hola a todos</h2>
+        {
+            paistotal.map(
+            (pais)=>{
+                return(
+                <>
+                    <Paiscomplete
+                    key={pais.name.official}
+                    urlImg={pais.flags.svg}
+                    namePais={pais.name.common}
+                    nameN={pais.name.official}
+                    population={pais.population}
+                    region={pais.region}
+                    capital={pais.capital}
+                    current={pais.currencies[Object.keys(pais.currencies)[0]].name}
+                    subregion={pais.subregion}
+                    domain={pais.tld[0]}
+                    topLevelDomain={pais.tld}
+                    lengua={pais.languages[Object.keys(pais.languages)[0]]}
+                    border1={pais.translations[Object.keys(pais.translations)[0]].common}
+                    border2={pais.translations[Object.keys(pais.translations)[1]].common}
+                    border3={pais.translations[Object.keys(pais.translations)[2]].common}
+                />
+                </>
+                )
+
+
+
+            })
+        }
         
         </>
     ):

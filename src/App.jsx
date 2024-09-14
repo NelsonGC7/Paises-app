@@ -46,6 +46,10 @@ const App = ()=>{
         console.log(data);
     }
    }
+   function Back(){
+    setVista(false)
+    console.log("clickBack")
+   }
   
    
 
@@ -69,6 +73,7 @@ return(
                 <>
                     <Paiscomplete
                     key={pais.name.official}
+                    back={Back}
                     urlImg={pais.flags.svg}
                     namePais={pais.name.common}
                     nameN={pais.name.official}
@@ -106,10 +111,8 @@ return(
             pais=>{
                 return(
                     <Paisbox
-                    click={()=>{
-                        console.log(pais.name.common)
-                        clikComponent(pais.name.common)
-                    }}
+
+                    click={()=>{clikComponent(pais.name.common)}}
                     key={pais.name.common}
                     pais={pais.name.common}
                     urlmg={pais.flags.png}

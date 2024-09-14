@@ -1,9 +1,9 @@
 import btonBack from '../assets/back.svg'
 
-export const Paiscomplete = ({ urlImg,namePais,nameN,population,region,subregion,capital,domain,current,lengua,border1,border2,border3 })=>{
+export const Paiscomplete = ({ urlImg,namePais,nameN,population,region,subregion,capital,domain,current,lengua,border1,border2,border3,back})=>{
     return(
         <section className="infoCompleta">
-            <button> <img src={btonBack} alt="" />Back</button>
+            <button onClick={back}> <img src={btonBack} alt="" />Back</button>
             <article className='infoCompleta__info'>
                 <figure className='infoCompleta__info-IMG'>
                     <img src={urlImg} alt="" />

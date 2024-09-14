@@ -105,6 +105,20 @@ return(
         <input type="text" onChange={enCambios}  placeholder="Search for a region..."  />
         <img src={search} />
         </form>
+
+        
+            <div className="select">
+                <h4>Filter by Region</h4>
+                <select>
+                    <option value="Africa">Africa</option>
+                    <option value="America">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+
+            </div>
+        
     <section className="ComponentPaises">
     {
         listotal.map(

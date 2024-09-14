@@ -88,6 +88,21 @@
         height:1.2rem;
     }
 }
+.select{
+    transform: translateX(-130%);
+    background-color: var(--DarkBlue-DarkModeElements);
+    padding: .5rem;
+    border-radius: .3rem;
+    select{
+        width: 100%;
+        background-color: var(--DarkBlue-DarkModeElements);
+        border: none;
+        color: white;
+        font-family: "Nunito Sans";
+        outline: 1px solid var(--VeryDarkBlue-DarkModeBackground);
+    }
+    
+}
 .ComponentPaises{
     width: 75%;
     max-width: 25rem;

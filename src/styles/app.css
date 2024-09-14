@@ -30,7 +30,7 @@
 }
 .Header{
     width: 100%;
-    min-height: 6rem;
+    min-height: 4.5rem;
     background-color:var(--DarkBlue-DarkModeElements);
     display: flex;
     align-items: center;
@@ -92,6 +92,7 @@
     height: 25rem;
     background-color: var(--DarkBlue-DarkModeElements);
     border-radius: .4rem;
+    cursor: pointer;
 }
 .ComponentPais__img{
     width: 100%;

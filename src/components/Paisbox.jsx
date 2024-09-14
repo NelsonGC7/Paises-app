@@ -1,8 +1,8 @@
 import '../styles/paisbox.css'
 
-export  const Paisbox = ({ urlmg,population,rejion,capital,pais })=>{
+export  const Paisbox = ({ urlmg,population,rejion,capital,pais,click })=>{
     return(
-        <article className="ComponentPais">
+        <article className="ComponentPais" onClick={click} >
             <figure className="ComponentPais__img">
                 <img src={ urlmg } />
             </figure>

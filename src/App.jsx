@@ -9,6 +9,8 @@ const App = ()=>{
     const [vista,setVista] = useState(false);
     const [paistotal,setPaistotal] = useState([])
     const [input,setInput]= useState("");
+    const [all,setAll] =useState(0)
+    const listaPaises = [...listotal]
     
     
     useEffect(()=>{
@@ -21,7 +23,7 @@ const App = ()=>{
                 })
 
         
-    },[]);
+    },[all]);
 
    
    function enCambios (e){
@@ -48,7 +50,19 @@ const App = ()=>{
    }
    function Back(){
     setVista(false)
-    console.log("clickBack")
+   }
+   async function filterRegion(e){
+    const region = e.target.value
+    if(region === "" ) return;
+    if (region === "All"){
+        return setAll(all + 1)
+    };
+    const url = `https://restcountries.com/v3.1/region/${region}`;
+   const res = await fetch(url)
+   const data = await res.json()
+   const dataFilter =  data.filter(pais => pais.region === region)
+   setListotal(dataFilter)
+
    }
   
    
@@ -105,23 +119,21 @@ return(
         <input type="text" onChange={enCambios}  placeholder="Search for a region..."  />
         <img src={search} />
         </form>
-
-        
             <div className="select">
                 <h4>Filter by Region</h4>
-                <select>
-                    <option value="Africa">Africa</option>
-                    <option value="America">America</option>
+                <select onChange={filterRegion}>
+                    <option value="All">All</option>
+                    <option  value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
                     <option value="Asia">Asia</option>
                     <option value="Europe">Europe</option>
                     <option value="Oceania">Oceania</option>
                 </select>
-
             </div>
         
     <section className="ComponentPaises">
     {
-        listotal.map(
+        listaPaises.map(
             pais=>{
                 return(
                     <Paisbox

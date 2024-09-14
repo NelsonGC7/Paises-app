@@ -89,7 +89,7 @@
     }
 }
 .select{
-    transform: translateX(-130%);
+    margin-right: 56%;
     background-color: var(--DarkBlue-DarkModeElements);
     padding: .5rem;
     border-radius: .3rem;
@@ -111,7 +111,6 @@
     align-items: center;
     gap: 3rem;
 }
-
 .ComponentPais{
     width: 100%;
     height: 25rem;

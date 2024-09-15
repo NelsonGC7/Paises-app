@@ -177,6 +177,7 @@
     height: auto;
     img{
         width: 100%;
+        
     }
 }
 .infoCompleta__info-INFO{
@@ -224,7 +225,20 @@
 }
 
 
-@media (width >= 56.25rem){
+@media (width >= 65rem){
+    .Header{
+        height: 7.5rem;
+        padding:  0 3rem;
+    }
+    .Header h3{
+        font-size: 2rem;
+    }
+    .Header figure p{
+        font-size: 1.5rem;  
+    }
+    .Header figure img{
+        height: 1.8rem;
+    }
 
     .ComponentPaises{
         width: 87%;
@@ -239,6 +253,17 @@
         width:20%;
         max-width: 25rem;
         
+    }
+    .ComponentPais__info{
+        h2{
+            font-size: 2rem;
+        }
+        strong{
+            font-size: 1.4rem;
+        }
+        p{
+            font-size: 1.2rem;
+        }
     }
     .formulario{
         width: 87%;
@@ -261,9 +286,56 @@
         margin-right: 5%;
         width: 15rem;
         transform: translateY(-125%);
-        
-        
-        
     }
+    .infoCompleta{
+        max-width: 95%;
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    .infoCompleta button{
+        width: 10rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+    .infoCompleta__info{
+        display: flex;
+        gap: 6.5rem;
+        height: 75%;
 
+    }
+    .infoCompleta__info-INFO-box{
+        flex-direction: row;
+        strong{
+            font-size: large;
+        }
+        p{
+            font-size: 1rem;
+        }
+    }
+    .infoCompleta__info-INFO{
+        height: 100%;
+        justify-content: space-between;
+    }
+    .infoCompleta__info-IMG{
+        width: 50%;
+        img{
+            height: 100%;
+            max-height: 25rem
+        
+            
+        }
+    }
+    .infoCompleta__info-border{
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        p{
+            margin: 0;
+            min-width: 4rem;
+        }
+        div{
+            gap: 1rem;
+        }
+    }
 }

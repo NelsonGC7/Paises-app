@@ -224,3 +224,46 @@
 }
 
 
+@media (width >= 56.25rem){
+
+    .ComponentPaises{
+        width: 87%;
+        max-width: 87%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .ComponentPais{
+        flex-grow: 1;
+        width:20%;
+        max-width: 25rem;
+        
+    }
+    .formulario{
+        width: 87%;
+        max-width: 87%;
+        position: relative;
+        
+        input{
+            width: 35%;
+            height: 3.5rem;
+            padding-left: 3.5rem;
+            font-size: large;
+        }
+        img{
+            transform: translateY(75%);
+        }
+    }
+    .select{
+        margin: 0;
+        margin-left: 74%;
+        margin-right: 5%;
+        width: 15rem;
+        transform: translateY(-125%);
+        
+        
+        
+    }
+
+}

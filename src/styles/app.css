@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    box-shadow:  0 2px 3.125rem 0 rgba(0, 0, 0, 0.466);
+    box-shadow:  0 2px 3rem 0 rgba(0, 0, 0, 0.308);
     margin-bottom: 6%
 }
 .Header h3{

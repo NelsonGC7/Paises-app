@@ -2,8 +2,6 @@ import { Paisbox } from "./components/Paisbox.jsx";
 import { Paiscomplete } from "./components/Paiscomplete.jsx";
 import { useState,useEffect } from "react";
 import './styles/App.css';
-import moon from '../public/svgs/moon.svg'
-import search from '../public/svgs/search.svg'
 const App = ()=>{
     const [listotal,setListotal] = useState([]);
     const [vista,setVista] = useState(false);
@@ -72,7 +70,7 @@ return(
     <header className="Header">
         <h3>Where in the world?</h3>
         <figure>
-            <img src={moon} alt="" />
+            <img src="/svgs/moon.svg" alt="" />
             <p>Dark mode</p>
         </figure>
 
@@ -117,7 +115,7 @@ return(
     <>
         <form className="formulario" onSubmit={sendDel} >
         <input type="text" onChange={enCambios}  placeholder="Search for a region..."  />
-        <img src={search} />
+        <img src="/svgs/search.svg" />
         </form>
             <div className="select">
                 <h4>Filter by Region</h4>

@@ -1,7 +1,7 @@
 import { Paisbox } from "./components/Paisbox.jsx";
 import { Paiscomplete } from "./components/Paiscomplete.jsx";
 import { useState,useEffect } from "react";
-import './styles/App.css';
+import './styles/app.css';
 const App = ()=>{
     const [listotal,setListotal] = useState([]);
     const [vista,setVista] = useState(false);

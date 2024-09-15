@@ -255,13 +255,13 @@
     }
     .ComponentPais__info{
         h2{
-            font-size: 2rem;
-        }
-        strong{
             font-size: 1.4rem;
         }
+        strong{
+            font-size: 1rem;
+        }
         p{
-            font-size: 1.2rem;
+            font-size: .9rem;
         }
     }
     .formulario{
@@ -288,9 +288,11 @@
     }
     .infoCompleta{
         max-width: 95%;
+        margin-bottom: 4rem;
         h3{
             font-size: 1.5rem;
         }
+        
     }
     .infoCompleta button{
         width: 10rem;
